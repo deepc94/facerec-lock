@@ -1,0 +1,10 @@
+*.pyc
+capture.pgm
+*.xml
+training/positive
+mean.png
+negative_eigenface.png
+positive_eigenface.png
+*.wav
+*.pdf
+.DS_Store
