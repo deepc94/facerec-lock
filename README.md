@@ -1,15 +1,15 @@
 # Raspberry Pi OpenCV-Python Face Recognition Lock
 
-###Introduction
+### Introduction
 This project was part of the embedded system design course, and uses face recognition to control a servo lock. The face recognition has been done using the Eigenfaces algorithm (Principle Component Analysis or PCA) and implemented using the Python API of OpenCV. For more information about face recognition in OpenCV, see [Face Recognition with OpenCV](http://docs.opencv.org/modules/contrib/doc/facerec/facerec_tutorial.html).
 
-###Motivation
+### Motivation
 It's a slight modification of the [Raspberry Pi Face Recognition Treasure Box](https://github.com/tdicola/pi-facerec-box) project by Tony Dicola on the [Adafruit Learning System](https://learn.adafruit.com/raspberry-pi-face-recognition-treasure-box/overview). The code has been modified at places to replace the use of the RPIO library (which has issues running on the new Raspberry Pi 2 Model B) with the standard RPi.GPIO library. The project has also been implemented to work as an automated home lock system which unlocks for the owner of the house and doesn't for any other visitor. It also plays an appropriate voice message.
 
-###Software
+### Software
 The following is a copy of the Software installation procedure found in the original project documentation:
 
-####OpenCV Installation
+#### OpenCV Installation
 This project depends on the OpenCV computer vision library to perform the face detection and recognition. Unfortunately the current binary version of OpenCV available to install in the Raspbian operating system through apt-get (version 2.3.x) is too old to contain the face recognition algorithms used by this project. However you can download, compile, and install a later version of OpenCV to access the face recognition algorithms.
 Note: Compiling OpenCV on the Raspberry Pi will take about 3 hours of mostly unattended time. Make sure you have some time to start the process before proceeding.
 
@@ -43,7 +43,7 @@ sudo make install
 ```
 After this step the latest version of OpenCV should be installed on your Raspberry Pi.
 
-####Python Dependencies
+#### Python Dependencies
 The code for this project is written in python and has a few dependencies that must be installed. Once connected to your Raspberry Pi in a terminal session, execute the following commands:
 ```
 sudo apt-get install python-pip
@@ -53,7 +53,7 @@ sudo pip install RPi.GPIO
 ```
 You can ignore any messages about packages which are already installed or up to date. These commands will install the picamera library for access to the Raspberry Pi camera, and the GPIO library for access to the Pi GPIO pins and PWM support.
 
-###Hardware
+### Hardware
 The Hardware required for this project are as follows:
 1. Raspberry Pi ( I prefer Model 2 B)
 
